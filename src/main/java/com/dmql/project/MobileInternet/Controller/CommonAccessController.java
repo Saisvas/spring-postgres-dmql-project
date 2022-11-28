@@ -4,10 +4,7 @@ import com.dmql.project.MobileInternet.Entity.*;
 import com.dmql.project.MobileInternet.Service.CommonAccessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,5 +45,10 @@ public class CommonAccessController {
     @ResponseBody
     public ResponseEntity<List<Coverage>> allCoverage() {
         return  ResponseEntity.ok(commonAccessService.findAllCoverage());
+    }
+
+    @PostMapping("/createOrUpdatePlan")
+    public ResponseEntity createOrUpdatePlan(@RequestBody Plan plan){
+        return ResponseEntity.ok(commonAccessService.createOrUpdatePlan(plan));
     }
 }

@@ -29,6 +29,15 @@ public class CommonAccessService {
     public List<Plan> findAllPlans(){
         return planRepository.findAll();
     }
+
+    public Plan createOrUpdatePlan(Plan plan){
+        if(plan.getId()==null){
+            //new plan
+        }else{//update
+            return planRepository.save(plan);
+        }
+        return plan;
+    }
     public List<Coverage> findAllCoverage(){
         return coverageRepository.findAll();
     }
