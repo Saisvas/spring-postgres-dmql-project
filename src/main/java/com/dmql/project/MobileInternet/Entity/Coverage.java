@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 public class Coverage {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -26,6 +26,6 @@ public class Coverage {
     private String networktype;
 
     @Column
-    private boolean deleted;
+    private Boolean deleted;
 }
 

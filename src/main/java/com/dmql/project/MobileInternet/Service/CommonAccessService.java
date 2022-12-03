@@ -90,46 +90,49 @@ public class CommonAccessService {
     public Users createOrUpdateUser(Users users){
         if(users.getId()==null){
             //new plan
+            return userRepository.save(users);
+
         }else{//update
             return userRepository.save(users);
         }
-        return users;
     }
 
     public Coverage createOrUpdateCoverage(Coverage coverage){
         if(coverage.getId()==null){
             //new plan
+            return coverageRepository.save(coverage);
         }else{//update
             return coverageRepository.save(coverage);
         }
-        return coverage;
     }
 
     public ServiceProvider createOrUpdateProvider(ServiceProvider provider){
         if(provider.getId()==null){
             //new plan
+            return serviceProviderRepository.save(provider);
+
         }else{//update
             return serviceProviderRepository.save(provider);
         }
-        return provider;
     }
 
     public Usage createOrUpdateUsage(Usage usage){
         if(usage.getId()==null){
             //new plan
+            return usageRepository.save(usage);
         }else{//update
             return usageRepository.save(usage);
         }
-        return usage;
     }
 
     public Plan createOrUpdatePlan(Plan plan){
         if(plan.getId()==null){
             //new plan
+            return planRepository.save(plan);
+
         }else{//update
             return planRepository.save(plan);
         }
-        return plan;
     }
 
 }

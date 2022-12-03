@@ -1,6 +1,7 @@
 package com.dmql.project.MobileInternet.Entity;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
@@ -23,6 +24,6 @@ public class ServiceProvider {
     private String headQuarters;
 
     @Column
-    private boolean deleted;
+    private Boolean deleted;
 }
 

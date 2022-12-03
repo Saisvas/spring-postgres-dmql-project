@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 public class Plan {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -35,6 +35,6 @@ public class Plan {
     private String networktype;
 
     @Column
-    private boolean deleted;
+    private Boolean deleted;
 }
 
