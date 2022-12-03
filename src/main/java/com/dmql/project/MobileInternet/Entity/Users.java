@@ -34,7 +34,7 @@ public class Users {
     private String state;
 
     @Column
-    private String zip;
+    private Integer zip;
 
     @Column
     private String ssn;
